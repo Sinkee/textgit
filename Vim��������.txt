@@ -1,0 +1,11 @@
+常用编码设置选项
+enconding  内部使用的编码方式，包括buffer， 菜单，消息
+fileencoding
+fileencodings  逐一探测即将打开File的字符编码，并设置fileencoding,因此最好将unicode放在最前，latin1最后。
+termencoding 终端使用的字符编码，对gvim1效。 对windows默认设置为cp936。
+
+File 打开时首先查找file的编码格式在fileencodings中。然后设置fileencoding,
+	 将 fileenconding转换为encoding,放入buffer中。
+
+
+	 由于unicode的UTF-8编码方式非常具有性价比（空间消耗比UCS-2小。），因此建议设置encoding 为UTF-8.另外，encoding设置为UTF-8时，File自动探测更加准确。
