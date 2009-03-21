@@ -10,3 +10,9 @@ git config --global user.name XXX
 git config --global user.enmal XXXX
 
 马上测试git是否可以push。
+
+使用 ssh-keygen产生公钥对，作为计算机标示，添加公钥数据。
+
+git remote 添加远程git路径
+
+git push 成功。
