@@ -2,7 +2,7 @@
 enconding  内部使用的编码方式，包括buffer， 菜单，消息
 fileencoding
 fileencodings  逐一探测即将打开File的字符编码，并设置fileencoding,因此最好将unicode放在最前，latin1最后。
-termencoding 终端使用的字符编码，对gvim1效。 对windows默认设置为cp936。
+termencoding 终端使用的字符编码，对gvim效。 对windows默认设置为cp936。
 
 File 打开时首先查找file的编码格式在fileencodings中。然后设置fileencoding,
 	 将 fileenconding转换为encoding,放入buffer中。

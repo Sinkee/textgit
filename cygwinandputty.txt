@@ -1,4 +1,6 @@
 cygwin windows下的模拟Linux的 中间层。
+安装过程中的chmod 777|+r|..  /dirc实际作用等效于操作的文件夹的访问控制列表.
+安装前可通过在新建的文件夹加权限避免中间的报错。
 putty 支持ssh，telnet的登陆工具。
 cygwin的安装过程中为了支持openssh的安装使用，选择所有用户。安装GCC，GDB，Vi,openssh，git等需要的 工具。Xp安装过程中，在磁盘C安装生成HOME路径，2003HOME路径是账户路劲，原因不明。
 然后修改HOME下的配置，使支持中文显示及输入。
@@ -16,3 +18,27 @@ git config --global user.enmal XXXX
 git remote 添加远程git路径
 
 git push 成功。
+
+cywin ssh的配置
+
+Server2003配置
+
+登陆成功后，putty断掉的问题
+重装 sshd
+
+cygrunsrv -E sshd; cygrunsrv -R sshd;ssh-host-config;net start sshd
+
+mkpasswd -l //本地账户
+mkpasswd -d //域帐户
+mkpasswd -d XXX  -u YYY//XXX域YYY账户
+mkpasswd -d XXX -p /home  -u  YYY//添加HOME路径。
+mkdir -p /home  //新加用户的HOME路径
+
+mount -s --change-cygdrive-prefix  /  //修改前缀
+
+sshd已经被安装为一个计算机的服务。可以像操作任何服务一样操作它。在service中，包括更改运行账户。
+
+ssh-host-config 配置主机
+
+ssh-user-config 配置用户Testssh可用。
+
