@@ -42,6 +42,29 @@ ssh-host-config 配置主机
 
 ssh-user-config 配置用户Testssh可用。
 
+HOME路径的设置。
+Cygwin 认为你的HOME是/etc/passwd标记的那行。
+1.通过添加符号链接到相应的文件
+ln -s /cygdrive/c/XXX  username
+2.通过环境变量设HOME
+3.编辑passwd
+
+更改sshd service 的owner
+
+0.检查账户是否符合条件()
+
+1.service中修改运行账户
+
+2.如果是新添加的用户，添加用户到passwd
+
+3.修改运行sshd的必需的文件的owner
+chown userid  /var/log/sshd.log
+chown -R userid /var/empty
+chown userid /etc/ssh*
+
+
+
+
 
 
 注意： 阅读/usr/share/doc/Cygwin/openssh.README 装完后，检查 Cygwin邮件列表，当你遇到问题。
