@@ -1,0 +1,12 @@
+cygwin windows下的模拟Linux的 中间层。
+putty 支持ssh，telnet的登陆工具。
+cygwin的安装过程中为了支持openssh的安装使用，选择所有用户。安装GCC，GDB，Vi,openssh，git等需要的 工具。Xp安装过程中，在磁盘C安装生成HOME路径，2003HOME路径是账户路劲，原因不明。
+然后修改HOME下的配置，使支持中文显示及输入。
+配置openssh使用命令ssh-host-config。。一水yes创建两个账户，一个是为了用服务启动，另一个忘了。按照帮助提示完成。最后 net start sshd或cygrunsrv -S sshd.使用putty登陆。注意本地装的vi和 cygwin的不同。选择安装。
+putty中文显示在外观中设置。输入用户名密码即可使用。
+
+git hub使用。
+git config --global user.name XXX
+git config --global user.enmal XXXX
+
+马上测试git是否可以push。
