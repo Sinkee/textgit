@@ -42,3 +42,8 @@ ssh-host-config 配置主机
 
 ssh-user-config 配置用户Testssh可用。
 
+
+
+注意： 阅读/usr/share/doc/Cygwin/openssh.README 装完后，检查 Cygwin邮件列表，当你遇到问题。
+
+邮件列表地址： http://www.cygwin.com/ml/cygwin
