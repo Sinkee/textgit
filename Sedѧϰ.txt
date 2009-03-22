@@ -1,0 +1,35 @@
+Sed Stream editor.
+命令对行进行处理，
+sed -e 'd' /file
+
+选项分类
+
+文本间隔
+sed G  //添加空行在每行后
+
+sed '/^$/;G'  //在空行后添加空行
+
+sed '/regex/{x;p;x;}'  //在行前插如空行
+
+编号
+sed = filename|sed 'N;s/\n/\t/'
+
+
+文本转换和替代
+sed 's/.$a//'  转换Dos的换行符
+
+sed 's/^[ \t]*//;s/[ \t]*$//'
+
+sed -e :a   //不明白
+
+
+选择性显示
+sed 10q   //模拟head
+sed -e :a -e '$q;N;11,$D;ba'  //模拟tail
+
+
+选择性删除
+sed -e 'd'
+
+
+
