@@ -20,8 +20,10 @@ sed 's/.$a//'  转换Dos的换行符
 
 sed 's/^[ \t]*//;s/[ \t]*$//'
 
-sed -e :a   //不明白
-
+sed -e :a   '*** ta'// 设置标签 ta跳到标签位置。
+sed -e :a -e '$!N;s/\n=/ /;ta' -e 'P;D'
+-e :a 定义标签
+$!N 不是最后一行
 
 选择性显示
 sed 10q   //模拟head
