@@ -62,6 +62,16 @@ chown userid  /var/log/sshd.log
 chown -R userid /var/empty
 chown userid /etc/ssh*
 
+cygwin 完全卸载
+1.删除安装用的临时文件夹
+2.停止服务
+3.cygrunsrv  --remove  XXX//删除服务
+4.删除文件夹 
+5.删除注册表
+
+Machine\software
+CurrentUser\software
+
 
 
 
@@ -70,3 +80,5 @@ chown userid /etc/ssh*
 注意： 阅读/usr/share/doc/Cygwin/openssh.README 装完后，检查 Cygwin邮件列表，当你遇到问题。
 
 邮件列表地址： http://www.cygwin.com/ml/cygwin
+
+
