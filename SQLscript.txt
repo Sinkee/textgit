@@ -1,0 +1,4 @@
+EXEC sp_addlinkedserver @server='',
+		
+
+EXEC sp_dropserver XXX
