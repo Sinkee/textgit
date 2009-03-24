@@ -1,5 +1,14 @@
 EXEC sp_addlinkedserver @server=''//Ìí¼Ólinkserver 
 
+EXEC sp_linkedserver 
+[@server]='serveer'
+[,[@srvproduct=]'product_name']
+[,[@provider=]'provider_name']
+[,[@datasrc=]'data_source']
+[,[@location=]'location']
+[,[@provstr=]'provider_string']
+[,[@catalog=]'catalog']
+
 if not exists
 (
 select *
@@ -35,6 +44,13 @@ Exec sp_addlinkedserver
 @srvproduct='ex',
 @provider='Microsoft.Jet.OLEDB.4.0',
 @datasrc='d:...xls',
-null,
-'Execel 5.0'
+@location=null,
+@provstr='Execel 5.0'
+
+
+Exec sp_addlinkedserver
+@server='XXx',
+@srvproduct='',
+@provider='SQLNCLI',
+@datasrc='YYY'
 
