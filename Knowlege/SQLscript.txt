@@ -58,3 +58,8 @@ Exec sp_addlinkedserver
 //查询主键 在MS SQL 中查询主键
 1. Exec sp_pkeys @table_name='xxx'
 2. Select TABLE_NAME,COLUMN_NAME FROM INFORMATION_SCHEMA.KEY_COLUMN_UASGE WHERE TABLE_NAME = 'XX'
+
+//远程表变量的函数调用是不允许的。
+
+
+//Job相关问题整理
