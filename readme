@@ -1,4 +1,12 @@
 Hello, git
+Change Arch
+1.Create dir for Script, Code, Knowlege and Other
+Script used to sav python or javascript file.
+Code used to sav C, C++, C# and other strongtype language.
+Knowlege used to sav knowlege which sav as txt generally.
+Other used to sav life and some other knowlege which has nothing to do with Computer.
+
+20090325
 
 Usage:
 1.The git is used to store some interesting text file.
