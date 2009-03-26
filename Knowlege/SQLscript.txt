@@ -63,3 +63,33 @@ Exec sp_addlinkedserver
 
 
 //Job相关问题整理
+
+
+
+//创建数据库
+Create Database dbname
+Primary on
+(
+Name=,
+Filename=,
+Size=,
+MaxSize=,
+FileGrowth=UNLIMITED
+),
+FileGroup FGName
+(...)//结尾无逗号
+
+on log
+(...)
+
+
+Alter Database dbnamea
+Add filegroup fgname
+Add file
+(...)
+to filegroup fgname
+
+
+
+
+

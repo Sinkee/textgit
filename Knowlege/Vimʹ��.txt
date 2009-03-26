@@ -1,0 +1,11 @@
+安装 ctags taglist 插件及 使用 。
+
+现在ctags的windows版，解压ctags.exe 文件到文件夹，路径中不含空格。
+解压taglist到vim 的插件目录。
+设置_vimrc
+let ctags=''  //ctags 路径
+set tags=tags;  //分号必须添加。
+set autochdir
+
+nnoremap <F12> :TlistToggle<CR>
+
