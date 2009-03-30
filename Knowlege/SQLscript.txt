@@ -91,5 +91,11 @@ to filegroup fgname
 
 
 
+//两条语句
+Select +1+1
+Select 1++1
 
+//数据库锁机制
+
+共享锁，排它锁，意向锁
 
