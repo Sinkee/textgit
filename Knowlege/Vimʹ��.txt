@@ -7,5 +7,10 @@ let ctags=''  //ctags 路径
 set tags=tags;  //分号必须添加。
 set autochdir
 
-nnoremap <F12> :TlistToggle<CR>
+nnoremap <F12> :TlistToggle<CR>//冒号前的空格必须
 
+详细设置说明见相关说明文档
+
+Cscope  的作用主要是寻找调用某函数的代码位置。
+
+Ctags 的作用是寻找函数的定义位置。
