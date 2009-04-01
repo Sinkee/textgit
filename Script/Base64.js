@@ -73,36 +73,43 @@ while(i < len) {
 }
 return out;
 }
-function jiami() {
-var str=input.value.replace(/ +$/g,"");
+function jiami(input) {
+var str=input.replace(/ +$/g,"");
 if (str.search(/^thunder|^flashget/i)==-1) {
   var thunder="AA"+str+"ZZ";
   thunder="thunder://"+base64encode(thunder);
   var flashget="[FLASHGET]"+str+"[FLASHGET]";
   flashget="flashget://"+base64encode(flashget)+"&abc";
-  x.innerHTML="迅雷地址：
-<a href="+thunder+">"+thunder+"<\/a>
-
-快车地址：
-<a href="+flashget+">"+flashget+"<\/a>";
+ // x.innerHTML="迅雷地址：
+//<a href="+thunder+">"+thunder+"<\/a>
+  WScript.Echo(thunder);
+  WScript.Echo(flashget);
+//快车地址：
+//<a href="+flashget+">"+flashget+"<\/a>";
 }
 }
-function jiemi() {
-var str=input.value.replace(/ +$|\/$/g,"");
+function jiemi(input) {
+var str=input.replace(/ +$|\/$/g,"");
 if (str.search(/^thunder/i)!=-1) {
   str=str.replace("thunder://","");
   str=base64decode(str).replace(/^AA|ZZ$/gi,"");
-  x.innerHTML="原始地址：
-<a href="+str+">"+str+"<\/a>";
+  WScript.Echo(str);
+//  x.innerHTML="原始地址：
+//<a href="+str+">"+str+"<\/a>";
 }
 else if (str.search(/^flashget/i)!=-1) {
   str=str.replace("flashget://","");
   str=str.replace(/&.*$/,"");
   str=base64decode(str).replace(/^\[FLASHGET\]|\[FLASHGET\]$/gi,"");
-  x.innerHTML="原始地址：
-<a href="+str+">"+str+"<\/a>";
+  WScript.Echo(str);
+//  x.innerHTML="原始地址：
+//<a href="+str+">"+str+"<\/a>";
 }
-else x.innerHTML="地址格式不正确，无法解密。";
+//else x.innerHTML="地址格式不正确，无法解密。";
+//else WScript.Echo("jk"）
 }
 //</script>
-
+jiami("http://ape.pt80.com/ruge/苏格兰风笛/Scotland%20Bagpipe/01.ape")
+jiemi("thunder://QUFodHRwOi8vYXBlLnB0ODAuY29tL3J1Z2UvzzxwzhsvU2NvdGxhbmQlMjBCYWdwaXBlLzAxLmFwZVpa")
+jiemi("flashget://W0ZMQVNIR0VUXWh0dHA6Ly9hcGUucHQ4MC5jb20vcnVnZS/PPHDOGy9TY290bGFuZCUyMEJhZ3BpcGUvMDEuYXBlW0ZMQVNIR0VUXQ==&abc")
+jiemi("thunder://QUFodHRwOi8veS54bDExMS5jb20vZ2dnZzMy 5yYXJaWg==")
