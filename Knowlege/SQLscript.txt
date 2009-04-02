@@ -1,3 +1,10 @@
+//配置linkedserver
+//查询主键
+//创建数据库语句
+//数据库事务机制
+//Job相关
+//Select into, Insert into select 的区别
+
 EXEC sp_addlinkedserver @server=''//添加linkserver 
 
 EXEC sp_linkedserver 
@@ -126,3 +133,7 @@ ACID:
 
 
 插入删除的锁？
+
+
+//Select into, Insert into select
+前者自动创建表，后者使用之前创建表
