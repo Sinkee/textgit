@@ -106,10 +106,10 @@ else if (str.search(/^flashget/i)!=-1) {
 //<a href="+str+">"+str+"<\/a>";
 }
 //else x.innerHTML="地址格式不正确，无法解密。";
-//else WScript.Echo("jk"）
+else WScript.Echo("jk");
 }
 //</script>
-jiami("http://ape.pt80.com/ruge/苏格兰风笛/Scotland%20Bagpipe/01.ape")
-jiemi("thunder://QUFodHRwOi8vYXBlLnB0ODAuY29tL3J1Z2UvzzxwzhsvU2NvdGxhbmQlMjBCYWdwaXBlLzAxLmFwZVpa")
-jiemi("flashget://W0ZMQVNIR0VUXWh0dHA6Ly9hcGUucHQ4MC5jb20vcnVnZS/PPHDOGy9TY290bGFuZCUyMEJhZ3BpcGUvMDEuYXBlW0ZMQVNIR0VUXQ==&abc")
-jiemi("thunder://QUFodHRwOi8veS54bDExMS5jb20vZ2dnZzMy 5yYXJaWg==")
+jiami("http://ape.pt80.com/ruge/uge/Scotland%20Bagpipe/01.ape")
+jiemi("thunder://QUFodHRwOi8vYXBlLnB0ODAuY29tL3J1Z2UvdWdlL1Njb3RsYW5kJTIwQmFncGlwZS8wMS5hcGVaWg==")
+jiemi("flashget://W0ZMQVNIR0VUXWh0dHA6Ly9hcGUucHQ4MC5jb20vcnVnZS91Z2UvU2NvdGxhbmQlMjBCYWdwaXBlLzAxLmFwZVtGTEFTSEdFVF0=&abc")
+jiemi("thunder://QUFmdHA6Ly8xMTE1MTY6OTlAMjE5LjE0Ny4xNy4xODcvW/alwem358jtd3d3LjEwMDBmci5jb21dLVNoaS5HYW4uRlJNLnJtdmJaWg==")
