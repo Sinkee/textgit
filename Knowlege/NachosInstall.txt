@@ -4,7 +4,8 @@ Unix系统环境
 当前安装方式对64位系统尚不完全支持。
 
 Win-Cygwin环境
-
+找到此环境的安装版本。
+Nachos4.1  需patch 以适用新的gnu环境需要MIPS交叉编译器。
 
 
 Nachos Java版
