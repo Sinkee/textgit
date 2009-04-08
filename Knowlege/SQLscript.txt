@@ -4,6 +4,9 @@
 //数据库事务机制
 //Job相关
 //Select into, Insert into select 的区别
+//Index 的B树结构
+//Collate 语句
+//字符串的N前缀
 
 EXEC sp_addlinkedserver @server=''//添加linkserver 
 
@@ -52,7 +55,18 @@ Exec sp_addlinkedserver
 @provider='Microsoft.Jet.OLEDB.4.0',
 @datasrc='d:...xls',
 @location=null,
-@provstr='Execel 5.0'
+@provstr='Execel 5.0'  这个字符串不能写错啊，可以是'Excel 8.0'
+
+IF NOT Exists
+(
+ Select * From sys.servers where name = ''
+ )
+Exec sp_addlinkedserver @server='',@srvproduct='Jet 4.0',@provider='Microsoft.Jet.OLEDB4.0',@datasrc='',@Location=null,@provstr=''
+
+Select * 
+From serna...sheetname
+
+Exec sp_dropserver @server=''
 
 
 Exec sp_addlinkedserver
@@ -136,4 +150,11 @@ ACID:
 
 
 //Select into, Insert into select
-前者自动创建表，后者使用之前创建表
+前者自动创建表，后者使用之前创建表a
+
+Collate 应用于column definition 或者database definition or a character string expression.
+synax: XXX collate CollationName.a
+
+字符串的N前缀
+This denotes that the subsequent string is in Unicode.(the N actually stand for National language character set)
+
