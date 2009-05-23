@@ -1,0 +1,3 @@
+#dd if=dev/cobd01 of=/dev/cobd02
+e2fsck -f /dev/cobd02
+resize2fs -p /dev/cobd02
